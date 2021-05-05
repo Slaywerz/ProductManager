@@ -8,9 +8,6 @@ import lombok.EqualsAndHashCode;
 public class Smartphone extends Product {
     private String producer;
 
-    public Smartphone() {
-    }
-
     public Smartphone(int id, String name, int price, String producer) {
         super(id, name, price);
         this.producer = producer;
