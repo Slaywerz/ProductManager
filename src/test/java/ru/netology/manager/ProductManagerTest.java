@@ -72,7 +72,7 @@ class ProductManagerTest {
     }
 
     @Test
-    public void shouldRemoveById(){
+    public void shouldRemoveById() {
         manager.addProduct(book1);
         manager.addProduct(book2);
         manager.addProduct(smart1);

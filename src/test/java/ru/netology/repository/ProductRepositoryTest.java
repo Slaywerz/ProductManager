@@ -5,7 +5,7 @@ import ru.netology.domain.Book;
 import ru.netology.domain.Product;
 import ru.netology.domain.Smartphone;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class ProductRepositoryTest {
     private ProductRepository repository = new ProductRepository();
@@ -15,7 +15,7 @@ class ProductRepositoryTest {
     private Smartphone smart2 = new Smartphone(4, "Smart 2", 450, "Producer 2");
 
     @Test
-    public void shouldSaveProduct(){
+    public void shouldSaveProduct() {
         repository.save(book1);
         Product[] actual = repository.findAll();
         Product[] expected = new Product[]{book1};
@@ -23,7 +23,7 @@ class ProductRepositoryTest {
     }
 
     @Test
-    public void shouldSaveAllProducts(){
+    public void shouldSaveAllProducts() {
         repository.save(book2);
         repository.save(smart1);
         repository.save(smart2);
